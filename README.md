@@ -28,9 +28,9 @@ pod 'SKAirSandbox', '~> 0.0.1'
 ```
 效果图：
 
-![图1](http://ww1.sinaimg.cn/large/006mQyr2ly1ftoe9gtg9yj30ku112dhn.jpg)
+![图1](http://ww1.sinaimg.cn/thumbnail/006mQyr2ly1ftoebj9mzqj30ku112dhn.jpg)
+![图2](http://ww1.sinaimg.cn/thumbnail/006mQyr2ly1ftoec6c1wcj30ku112q3p.jpg)
 
-![图2](http://ww1.sinaimg.cn/large/006mQyr2ly1ftoeastvvgj30ku112q3p.jpg)
 作者:[music4kid](https://github.com/music4kid)
 
 项目原地址：[AirSandbox](https://github.com/music4kid/AirSandbox)
