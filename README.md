@@ -13,7 +13,7 @@ pod 'SKAirSandbox', '~> 0.0.1'
 ```
 ## 使用方式
 ### 
-当keywindow创建之后使用，可使用清扫手势也可以自己单独触发。
+当keywindow创建之后使用，可使用清扫手势。
 ```
 
 #ifdef DEBUG
@@ -22,6 +22,8 @@ pod 'SKAirSandbox', '~> 0.0.1'
     });
 #endif
 ```
+也可以自己单独触发。
+
 ```
 
 #ifdef DEBUG
