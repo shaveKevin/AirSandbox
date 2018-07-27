@@ -1,0 +1,16 @@
+PODS:
+  - AirSandbox (0.0.1)
+
+DEPENDENCIES:
+  - AirSandbox (from `../`)
+
+EXTERNAL SOURCES:
+  AirSandbox:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AirSandbox: f5dde33e0b21638946b28b04c78e54165d8442cf
+
+PODFILE CHECKSUM: ea040d698cc70eca9bf190a366870f5c3cdd7625
+
+COCOAPODS: 1.5.2
