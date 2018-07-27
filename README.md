@@ -1,4 +1,4 @@
-# AirSandbox
+# SKAirSandbox
 开发过程中实时查看沙盒的工具
 ## 集成方式
 ### cocoapods
