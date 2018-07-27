@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class AirSandboxModel;
-@interface AirSandboxCell : UITableViewCell
+@class SKAirSandboxModel;
+@interface SKAirSandboxCell : UITableViewCell
 
-- (void)renderCellWithItem:(AirSandboxModel *)item;
+- (void)renderCellWithItem:(SKAirSandboxModel *)item;
 
 @end

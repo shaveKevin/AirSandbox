@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger,SKAirSandboxFileItemType) {
     
     eSKFileItemFile = 3,
 };
-@interface AirSandboxModel : NSObject
+@interface SKAirSandboxModel : NSObject
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *path;
 @property (nonatomic, assign) SKAirSandboxFileItemType type;

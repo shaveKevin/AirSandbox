@@ -1,13 +1,13 @@
 //
 //  AppDelegate.m
-//  AirSandboxDemo
+//  SKAirSandboxDemo
 //
 //  Created by shavekevin on 2018/7/27.
 //  Copyright © 2018年 shavekevin. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "AirSandboxTool.h"
+#import "SKAirSandboxTool.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
 #ifdef DEBUG
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[AirSandboxTool sharedInstance] enableSwipe];
+        [[SKAirSandboxTool sharedInstance] enableSwipe];
     });
 #endif
     return YES;

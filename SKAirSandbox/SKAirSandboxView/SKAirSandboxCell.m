@@ -6,10 +6,10 @@
 //  Copyright © 2018年 shavekevin. All rights reserved.
 //
 
-#import "AirSandboxCell.h"
-#import "AirSandboxModel.h"
+#import "SKAirSandboxCell.h"
+#import "SKAirSandboxModel.h"
 
-@interface AirSandboxCell ()
+@interface SKAirSandboxCell ()
 
 @property (nonatomic, strong) UILabel *contentLabel;
 
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation AirSandboxCell
+@implementation SKAirSandboxCell
 
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -39,7 +39,7 @@
 
     // Configure the view for the selected state
 }
-- (void)renderCellWithItem:(AirSandboxModel *)item {
+- (void)renderCellWithItem:(SKAirSandboxModel *)item {
     
     [self.contentLabel setText:item.name];
 }

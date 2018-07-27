@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AirSandboxTool : NSObject
+@interface SKAirSandboxTool : NSObject
 /**
  单例
- 
  @return single
  */
 + (instancetype)sharedInstance;

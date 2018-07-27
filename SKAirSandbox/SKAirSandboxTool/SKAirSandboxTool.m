@@ -6,23 +6,25 @@
 //  Copyright © 2018年 shavekevin. All rights reserved.
 //
 
-#import "AirSandboxTool.h"
+#import "SKAirSandboxTool.h"
 #import <UIKit/UIKit.h>
-#import "AirSandboxVC.h"
+#import "SKAirSandboxVC.h"
 
-@interface AirSandboxTool()
+@interface SKAirSandboxTool()
 
 @property (nonatomic, strong) UIWindow *window;
 
-@property (nonatomic, strong) AirSandboxVC *airSandboxVC;
+@property (nonatomic, strong) SKAirSandboxVC *airSandboxVC;
 
 @end
-@implementation AirSandboxTool
+
+@implementation SKAirSandboxTool
+
 + (instancetype)sharedInstance {
-    static AirSandboxTool *airSandboxTool;
+    static SKAirSandboxTool *airSandboxTool;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        airSandboxTool = [[AirSandboxTool alloc]init];
+        airSandboxTool = [[SKAirSandboxTool alloc]init];
     });
     return airSandboxTool;
 }
@@ -65,9 +67,9 @@
     return _window;
 }
 
-- (AirSandboxVC *)airSandboxVC {
+- (SKAirSandboxVC *)airSandboxVC {
     if (!_airSandboxVC) {
-        _airSandboxVC = [[AirSandboxVC alloc]init];
+        _airSandboxVC = [[SKAirSandboxVC alloc]init];
     }
     return _airSandboxVC;
 }

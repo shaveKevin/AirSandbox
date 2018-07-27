@@ -1,0 +1,16 @@
+PODS:
+  - SKAirSandbox (0.0.1)
+
+DEPENDENCIES:
+  - SKAirSandbox (from `../`)
+
+EXTERNAL SOURCES:
+  SKAirSandbox:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SKAirSandbox: 113eb73b62e310aace7077b3e5ac9106d74126de
+
+PODFILE CHECKSUM: ffd84cdc9009ae8e7d76dab3ed12d9ed1c2ff6a3
+
+COCOAPODS: 1.5.2

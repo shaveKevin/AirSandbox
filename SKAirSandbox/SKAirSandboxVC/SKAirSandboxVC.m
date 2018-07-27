@@ -1,18 +1,16 @@
 //
 //  SKAirSandboxVC.m
-//  SKAirSandboxVC
+//  Pods-AirSandboxDemo
 //
 //  Created by shavekevin on 2018/7/27.
-//  Copyright © 2018年 shavekevin. All rights reserved.
 //
 
-#import "AirSandboxVC.h"
-#import "AirSandboxCell.h"
-#import "AirSandboxModel.h"
-
+#import "SKAirSandboxVC.h"
+#import "SKAirSandboxCell.h"
+#import "SKAirSandboxModel.h"
 static NSString *const  cellIdentifier = @"AirSandboxCellIdentifier";
 
-@interface AirSandboxVC ()
+@interface SKAirSandboxVC ()
 <UITableViewDataSource,
 UITableViewDelegate>
 
@@ -23,17 +21,15 @@ UITableViewDelegate>
 @property (nonatomic, copy) NSString *rootPath;
 
 @property (nonatomic, strong) UIButton *btnClose;
-
-
 @end
 
-@implementation AirSandboxVC
+@implementation SKAirSandboxVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupData];
     [self loadPath:nil];
-   
+    
 }
 
 - (void)setupData{
@@ -49,7 +45,7 @@ UITableViewDelegate>
     if (targetPath.length == 0 || [targetPath isEqualToString:_rootPath]) {
         targetPath = _rootPath;
     } else {
-        AirSandboxModel* file = [AirSandboxModel new];
+        SKAirSandboxModel* file = [SKAirSandboxModel new];
         file.name = @"🔙..";
         file.type = eSKFileItemUp;
         file.path = filePath;
@@ -64,7 +60,7 @@ UITableViewDelegate>
         BOOL isDir = false;
         NSString* fullPath = [targetPath stringByAppendingPathComponent:path];
         [fileManager fileExistsAtPath:fullPath isDirectory:&isDir];
-        AirSandboxModel* file = [AirSandboxModel new];
+        SKAirSandboxModel* file = [SKAirSandboxModel new];
         file.path = fullPath;
         if (isDir) {
             file.type = eSKFileItemDirectory;
@@ -100,10 +96,10 @@ UITableViewDelegate>
     if (indexPath.row > _items.count-1) {
         return [UITableViewCell new];
     }
-    AirSandboxModel* item = [_items objectAtIndex:indexPath.row];
-    AirSandboxCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    SKAirSandboxModel* item = [_items objectAtIndex:indexPath.row];
+    SKAirSandboxCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
-        cell = [[AirSandboxCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[SKAirSandboxCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     [cell renderCellWithItem:item];
     return cell;
@@ -118,7 +114,7 @@ UITableViewDelegate>
         return;
     }
     [tableView deselectRowAtIndexPath:indexPath animated:false];
-    AirSandboxModel* item = [_items objectAtIndex:indexPath.row];
+    SKAirSandboxModel* item = [_items objectAtIndex:indexPath.row];
     if (item.type == eSKFileItemUp) {
         [self loadPath:[item.path stringByDeletingLastPathComponent]];
     }
@@ -167,7 +163,7 @@ UITableViewDelegate>
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         _tableView.tableFooterView = [UIView new];
-        [_tableView registerClass:[AirSandboxCell class] forCellReuseIdentifier:cellIdentifier];
+        [_tableView registerClass:[SKAirSandboxCell class] forCellReuseIdentifier:cellIdentifier];
         [self.view addSubview:_tableView];
     }
     return _tableView;
